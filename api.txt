@@ -1,0 +1,24 @@
+
+API ENDPOINTS
+================================
+
+Get all producs:
+'https://dummyjson.com/products'
+
+Get single product:
+'https://dummyjson.com/products/1'
+
+Search producs:
+'https://dummyjson.com/products/search?q=phone'
+
+Get all products categories:
+'https://dummyjson.com/products/categories'
+
+Get product category list:
+'https://dummyjson.com/products/category-list'
+
+Get products by a category:
+'https://dummyjson.com/products/category/smartphones'
+
+
+npx tailwindcss -i ./assets/input.css -o ./assets/output.css --watch

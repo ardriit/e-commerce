@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard-E-Shop</title>
+    <link rel="stylesheet" href="assets/output.css">
+</head>
+<body>
+    <section class="header"></section>
+    <div class=" container mx-auto flex justify-between my-5"> 
+        <h1 class=" text-3xl font-bold ">Orders</h1>
+        <button id="logout" class="text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full " type="submit">Log Out</button>
+    </div>
+
+    <div id="orders" class="container mx-auto flex flex-col-reverse items-center ">
+    </div>
+
+    <section class="footer"></section>
+    
+    
+    
+    
+<script type="module" >
+
+    import Header from "./components/Header.js"
+    import Footer from "./components/Footer.js"
+    import Dashboard from "./components/Dashboard.js"
+
+
+    document.querySelector('.header').innerHTML =  Header()
+    Dashboard()
+    document.querySelector('.footer').innerHTML = Footer()    
+
+    
+            const logoutButton = document.querySelector('#logout');
+            if (logoutButton) {
+                logoutButton.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    localStorage.removeItem('is_loggedin');
+                    window.location.href = 'index.html'; 
+                });
+            }
+// const cart = JSON.parse(localStorage.getItem('cart'))
+//     console.log(cart)
+</script>
+</body>
+</html>

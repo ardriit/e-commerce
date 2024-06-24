@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-E-Shop</title>
+    <link rel="stylesheet" href="assets/output.css">
+</head>
+<body>
+    <section class="header"></section>
+
+
+    <div id="product-details" class="w-1/4 border rounded-xl flex flex-col items-center p-4 shadow-xl bg-white mx-auto mt-8 px-4">
+    
+    </div>
+    <div class=" flex flex-col items-center mt-10 border border-x">
+        <h3 class="text-3xl text-center font-bold mb-2">Related Products</h3>
+        <div id="related" class="container grid grid-cols-4 place-items-center">
+
+        </div>
+    </div>
+    <section class="footer"></section>
+
+    <script type="module" >
+        import Header from "./components/Header.js"
+         import Footer from "./components/Footer.js"
+        import Product from "./components/Product.js"
+
+
+        const urlParams = new URLSearchParams(window.location.search)
+        const productId = urlParams.get('id');
+        Product(productId)
+
+
+        document.querySelector('.header').innerHTML =  Header() 
+
+
+        document.querySelector('.footer').innerHTML = Footer()        
+
+    </script>
+</body>
+</html>

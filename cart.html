@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart-E-shop</title>
+    <link rel="stylesheet" href="assets/output.css">
+</head>
+<body>
+    <section class="header"></section>
+    <h1 class="text-3xl font-bold text-center mb-6">Shopping Cart</h1>
+    <div id="cart" class="bg-white p-6 rounded-lg shadow-lg">
+    </div>
+    <!-- <form class="my-4 flex items-center" action="#">
+        <textarea name="address" id="address" class="w-1/3 border border-blue-200 p-3 mx-3" placeholder="Enter email address"></textarea>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full " type="submit">Checkout</button>
+    </form> -->
+
+
+    <section class="footer"></section>
+</body>
+
+<script type="module" >
+    import Header from "./components/Header.js"
+    import Cart from "./components/Cart.js"
+    import Footer from "./components/Footer.js"
+         document.querySelector('.header').innerHTML =  Header() 
+         Cart()
+         document.querySelector('.footer').innerHTML = Footer()                                               
+
+        // const isLoggedIn = JSON.parse(localStorage.getItem('is_loggedin'));
+        // const form = document.querySelector('form')
+
+        // if(isLoggedIn){
+        // form.addEventListener('submit', event => {
+        //     event.preventDefault()
+        //     const elements = event.target.elements
+
+            
+        // })
+
+        // }
+        // else{
+        //     alert(`Please login in first`)
+        // }
+</script>
+</html>
